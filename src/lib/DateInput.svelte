@@ -26,7 +26,7 @@
 				if (date === null || date === undefined) {
 					innerStore.set(null)
 					value = date
-				} else if (date.getTime() !== $innerStore?.getTime()) {
+				} else if (date instanceof Date && date.getTime() !== $innerStore?.getTime()) {
 					innerStore.set(date)
 					value = date
 				}
