@@ -50,7 +50,13 @@
 	export let disabled = false
 	/** Pass custom classes */
 	let classes = ''
-	export { classes as class }
+	export { classes as class }	
+	/** pass inputClass as class to input field */
+	export let inputClass = ''
+	/** pass inputStyle as style to input field */
+	export let inputStyle = ''
+	/** pass inputName as name to input field */
+	export let inputName = ''
 
 	/** Format string */
 	export let format = 'yyyy-MM-dd HH:mm:ss'
@@ -187,6 +193,9 @@
 		class:invalid={!valid}
 		type="text"
 		value={text}
+		name={inputName}
+		class={inputClass}
+		style={inputStyle}
 		{placeholder}
 		{disabled}
 		on:focus={() => (visible = true)}
